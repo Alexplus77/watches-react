@@ -1,5 +1,5 @@
-import { Form } from "./components/Form";
-import { WatchCard } from "./components/WatchCard";
+import { Form } from "components/Form";
+import { WatchCard } from "components/WatchCard";
 import { nanoid } from "nanoid";
 import { format } from "date-fns";
 import React, { useEffect, useState } from "react";
