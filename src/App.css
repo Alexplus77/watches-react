@@ -27,6 +27,7 @@ justify-items: center;
     height: 30px;
     background-color: white;
     font-weight: bold;
+    cursor: pointer;
 }
 .label-name{
    grid-area: label-name;
