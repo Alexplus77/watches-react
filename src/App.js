@@ -1,4 +1,3 @@
-import { addHours, format } from "date-fns";
 import { Form } from "./components/Form";
 import { WatchCard } from "./components/WatchCard";
 import { nanoid } from "nanoid";
@@ -23,7 +22,6 @@ const App = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     validateValue() && setWatches([...watches, { id: nanoid(), ...dataValue }]);
-    console.log(validateValue());
     e.currentTarget.reset();
     setDataValue({});
   };
