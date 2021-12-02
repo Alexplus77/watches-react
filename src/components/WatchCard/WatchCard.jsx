@@ -1,5 +1,6 @@
 import { addHours, format } from "date-fns";
 import React from "react";
+import "App.css";
 
 const WatchCard = ({ id, name, timeZone, handleRemove }) => (
   <div key={id} className="watch-card">

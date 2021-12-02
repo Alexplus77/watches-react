@@ -9,7 +9,9 @@ const App = () => {
   const [dataValue, setDataValue] = useState({});
   const [time, setTime] = useState(null);
   const [watches, setWatches] = useState([]);
+
   const inputName = useRef();
+
   useEffect(() => {
     const idInterval = setInterval(() => setTime(new Date()), 1000);
     return () => clearInterval(idInterval);

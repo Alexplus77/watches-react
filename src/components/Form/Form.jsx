@@ -1,4 +1,5 @@
 import React from "react";
+import "App.css";
 
 const Form = ({ handleSubmit, handleChange, inputName }) => (
   <form className="form" onSubmit={handleSubmit}>
