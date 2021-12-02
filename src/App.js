@@ -12,7 +12,7 @@ const App = () => {
   useEffect(() => {
     const idInterval = setInterval(() => setTime(new Date()), 1000);
     return () => clearInterval(idInterval);
-  }, []);
+  }, [time]);
   const validateValue = () => {
     return dataValue.name?.trim().length && Number(dataValue.timeZone) > 0;
   };
