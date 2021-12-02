@@ -37,7 +37,6 @@ const WatchesPage = () => {
   };
   const handleRemove = (idItem) => {
     setWatches(() => watches.filter(({ id }) => id !== idItem));
-    clearInterval(idInterval.current);
   };
 
   return (
