@@ -9,14 +9,16 @@ const App = () => {
   const [dataValue, setDataValue] = useState({});
   const [time, setTime] = useState(null);
   const [watches, setWatches] = useState([]);
+
   useEffect(() => {
     const idInterval = setInterval(() => setTime(new Date()), 1000);
     return () => clearInterval(idInterval);
   }, [time]);
+
   const validateValue = () => {
     return dataValue.name?.trim().length && Number(dataValue.timeZone) > 0;
   };
-  console.log(time);
+
   const handleChange = ({ target: { name, value } }) => {
     value.trim() && setDataValue({ ...dataValue, [name]: value });
   };
