@@ -3,8 +3,12 @@ import "App.css";
 
 const Form = ({ handleSubmit, handleChange, inputName }) => (
   <form className="form" onSubmit={handleSubmit}>
-    <label className="label-name"> Название </label>
+    <label htmlFor="name1" className="label-name">
+      {" "}
+      Название{" "}
+    </label>
     <input
+      id="name1"
       ref={inputName}
       className="input-name"
       defaultValue=""
@@ -15,8 +19,12 @@ const Form = ({ handleSubmit, handleChange, inputName }) => (
       placeholder="Город"
     />
 
-    <label className="label-timezone"> Временная зона</label>
+    <label htmlFor="timeZone" className="label-timezone">
+      {" "}
+      Временная зона
+    </label>
     <input
+      id="timeZone"
       className="input-timezone"
       type="number"
       onChange={handleChange}
