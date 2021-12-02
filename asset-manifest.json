@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/watches-react/static/css/main.86db5a94.chunk.css",
+    "main.css": "/watches-react/static/css/main.b246e1c5.chunk.css",
     "main.js": "/watches-react/static/js/main.b6e3abf1.chunk.js",
     "main.js.map": "/watches-react/static/js/main.b6e3abf1.chunk.js.map",
     "runtime-main.js": "/watches-react/static/js/runtime-main.f344c6fd.js",
@@ -8,13 +8,13 @@
     "static/js/2.dc76255d.chunk.js": "/watches-react/static/js/2.dc76255d.chunk.js",
     "static/js/2.dc76255d.chunk.js.map": "/watches-react/static/js/2.dc76255d.chunk.js.map",
     "index.html": "/watches-react/index.html",
-    "static/css/main.86db5a94.chunk.css.map": "/watches-react/static/css/main.86db5a94.chunk.css.map",
+    "static/css/main.b246e1c5.chunk.css.map": "/watches-react/static/css/main.b246e1c5.chunk.css.map",
     "static/js/2.dc76255d.chunk.js.LICENSE.txt": "/watches-react/static/js/2.dc76255d.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.f344c6fd.js",
     "static/js/2.dc76255d.chunk.js",
-    "static/css/main.86db5a94.chunk.css",
+    "static/css/main.b246e1c5.chunk.css",
     "static/js/main.b6e3abf1.chunk.js"
   ]
 }
