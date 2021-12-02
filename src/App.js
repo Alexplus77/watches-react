@@ -11,10 +11,11 @@ const App = () => {
   const [watches, setWatches] = useState([]);
 
   const inputName = useRef();
+  const idInterval = useRef();
 
   useEffect(() => {
-    const idInterval = setInterval(() => setTime(new Date()), 1000);
-    return () => clearInterval(idInterval);
+    idInterval.current = setInterval(() => setTime(new Date()), 1000);
+    return () => clearInterval(idInterval.current);
   }, [time]);
 
   useEffect(() => {
@@ -37,6 +38,7 @@ const App = () => {
   };
   const handleRemove = (idItem) => {
     setWatches(() => watches.filter(({ id }) => id !== idItem));
+    clearInterval(idInterval.current);
   };
 
   return (
