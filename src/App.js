@@ -2,18 +2,22 @@ import { Form } from "components/Form";
 import { WatchCard } from "components/WatchCard";
 import { nanoid } from "nanoid";
 import { format } from "date-fns";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "App.css";
 
 const App = () => {
   const [dataValue, setDataValue] = useState({});
   const [time, setTime] = useState(null);
   const [watches, setWatches] = useState([]);
-
+  const inputName = useRef();
   useEffect(() => {
     const idInterval = setInterval(() => setTime(new Date()), 1000);
     return () => clearInterval(idInterval);
   }, [time]);
+
+  useEffect(() => {
+    inputName.current.focus();
+  }, []);
 
   const validateValue = () => {
     return dataValue.name?.trim().length && Number(dataValue.timeZone) > 0;
@@ -35,7 +39,11 @@ const App = () => {
 
   return (
     <div className="container">
-      <Form handleSubmit={handleSubmit} handleChange={handleChange} />
+      <Form
+        handleSubmit={handleSubmit}
+        handleChange={handleChange}
+        inputName={inputName}
+      />
       <div>
         <div className="local-watch">
           Местное время: {format(new Date(), "HH:mm:ss")}

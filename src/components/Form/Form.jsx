@@ -1,9 +1,10 @@
 import React from "react";
 
-const Form = ({ handleSubmit, handleChange }) => (
+const Form = ({ handleSubmit, handleChange, inputName }) => (
   <form className="form" onSubmit={handleSubmit}>
     <label className="label-name"> Название </label>
     <input
+      ref={inputName}
       className="input-name"
       defaultValue=""
       type="text"
