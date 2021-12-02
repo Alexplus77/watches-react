@@ -47,10 +47,10 @@ grid-area: label-timezone;
 }
 .container-watches{
     display: grid;
-    grid-template-columns: repeat(3, 200px);
-    width: 600px;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+    width: 100%;
     height: 40vh;
-    padding-left: 30px;
     padding-top: 20px;
     overflow: auto;
 }
@@ -69,9 +69,70 @@ grid-area: label-timezone;
     justify-self: right;
     text-align: center;
 }
-.titleWatch{
 
+@media screen and (max-width: 745px) {
+.container-watches{
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 50px;
 }
-.dataWatch{
+    .form{
+        width: 90%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: 'label-name label-timezone'
+                         'inpute-name input-timezone'
+                         'btn-submit btn-submit';
+    }
+}
+@media screen and (max-width: 500px){
+    .form{
+        width: 70%;
+        grid-template-rows: repeat(5, 1fr);
+        grid-template-areas: 'label-name'
+                         'inpute-name'
+                        'label-timezone'
+                       'input-timezone'
+                         'btn-submit' ;
+    }
+    .container{
+        width: 300px;
+    }
+    .container-watches{
+        width: 250px;
+       column-gap: 5px;
+    }
+    .watch-card{
+        width: 100px;
+    }
+}
+@media screen and (max-width: 405px){
+    .container{
+        width: 250px;
+    }
+   .form{
+       justify-items: center;
+       width: 90%;
+       padding-left: 80px;
+   }
+}
+@media screen and (max-width: 350px){
+.container{
+    width: 210px;
+}
+    .form{
+        padding-left:0;
+        width: 80%;
 
+    }
+    .container-watches{
+        grid-template-columns: 200px;
+        gap: 10px;
+        justify-items: center;
+    }
+    .watch-card{
+        width: 170px;
+    }
+    .local-watch{
+        width: 170px;
+    }
 }
